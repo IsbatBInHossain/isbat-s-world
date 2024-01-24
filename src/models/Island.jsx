@@ -13,7 +13,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import islandScene from '../assets/3d/island.glb'
 import { a } from '@react-spring/three'
 
-const Island = ({ isRotating, setIsRotating, ...props }) => {
+const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   const islandRef = useRef()
 
   const { gl, viewport } = useThree()
@@ -39,6 +39,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
   const handlePointerMove = e => {
     e.stopPropagation()
     e.preventDefault()
+
     if (isRotating) {
       const clientX = e.touches ? e.touches[0].clientX : e.clientX
       const delta = (clientX - lastX.current) / viewport.width
@@ -52,10 +53,12 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
   const handleKeyDown = e => {
     if (e.key === 'ArrowLeft') {
       if (!isRotating) setIsRotating(true)
-      islandRef.current.rotation.y += 0.01 * Math.PI
+      islandRef.current.rotation.y += 0.005 * Math.PI
+      rotationSpeed.current = 0.007
     } else if (e.key === 'ArrowRight') {
       if (!isRotating) setIsRotating(true)
       islandRef.current.rotation.y -= 0.01 * Math.PI
+      rotationSpeed.current = -0.007
     }
   }
   const handleKeyUp = e => {
@@ -72,7 +75,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
       }
       islandRef.current.rotation.y += rotationSpeed.current
     } else {
-      rotation = islandRef.current.rotation.y
+      const rotation = islandRef.current.rotation.y
 
       const normalizedRotation =
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI)
