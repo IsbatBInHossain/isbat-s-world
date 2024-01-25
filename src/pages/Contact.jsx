@@ -1,5 +1,10 @@
-import { useRef, useState } from 'react'
+import { Suspense, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { Canvas } from '@react-three/fiber'
+import Fox from '../models/Fox'
+import Loader from '../components/Loader'
+import useAlert from '../hooks/useAlert'
+import Alert from '../components/Alert'
 
 const initialState = {
   name: '',
@@ -10,7 +15,9 @@ const initialState = {
 const Contact = () => {
   const [form, setForm] = useState(initialState)
   const [isLoading, setIsLoading] = useState(false)
+  const [currentAnimation, setCurrentAnimation] = useState('idle')
   const formRef = useRef(null)
+  const { alert, showAlert, hideAlert } = useAlert()
 
   const handleChange = e => {
     setForm({
@@ -18,16 +25,13 @@ const Contact = () => {
       [e.target.name]: e.target.value,
     })
   }
-  const handleFocus = () => {
-    console.log('Focus')
-  }
-  const handleBlur = () => {
-    console.log('Blur')
-  }
+  const handleFocus = () => setCurrentAnimation('walk')
+  const handleBlur = () => setCurrentAnimation('idle')
 
   const handleSubmit = e => {
     e.preventDefault()
     setIsLoading(true)
+    setCurrentAnimation('hit')
 
     emailjs
       .send(
@@ -43,20 +47,33 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        setIsLoading(false)
-        // TODO: Show success message
+        showAlert({
+          show: true,
+          message: 'Your mail has been delivered successfully',
+          type: 'success',
+        })
 
-        setForm(initialState)
+        setIsLoading(false)
+        setTimeout(() => {
+          hideAlert()
+          setCurrentAnimation('idle')
+          setForm(initialState)
+        }, 3000)
       })
       .catch(e => {
-        setIsLoading(false)
         console.log(e)
-        // TODO: Show failure message
+        setIsLoading(false)
+        setCurrentAnimation('idle')
+        showAlert({
+          show: true,
+          message: 'Sorry, failed to send mail',
+          type: 'danger',
+        })
       })
   }
-
   return (
-    <section className='flex flex-col lg:flex-col relative max-container'>
+    <section className='flex-col flex lg:flex-row relative max-container'>
+      {alert.show && <Alert />}
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in Touch</h1>
         <form
@@ -116,6 +133,26 @@ const Contact = () => {
             {isLoading ? 'Sending Your Message...' : 'Send Message'}
           </button>
         </form>
+      </div>
+      <div className=' lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+        <Canvas
+          camera={{
+            position: [0, 0, 5],
+            fov: 75,
+            near: 0.1,
+            far: 1000,
+          }}
+        >
+          <directionalLight intensity={2.5} position={[0, 0, 1]} />
+          <Suspense fallback={<Loader />}>
+            <Fox
+              position={[0.5, 0.35, 0]}
+              rotation={[12.6, -0.6, 0]}
+              scale={[0.5, 0.5, 0.5]}
+              currentAnimation={currentAnimation}
+            />
+          </Suspense>
+        </Canvas>
       </div>
     </section>
   )
