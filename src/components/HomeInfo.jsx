@@ -25,7 +25,7 @@ const rederedContent = {
   ),
   2: (
     <InfoBox
-      text='My journey as a programmer started from a love for prdblem solving and puzzles.'
+      text='My journey as a programmer started from a love for problem solving and puzzles.'
       link='/about'
       btnText='Learn More'
     />
