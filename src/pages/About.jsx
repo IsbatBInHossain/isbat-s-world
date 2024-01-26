@@ -1,3 +1,4 @@
+import CTA from '../components/CTA'
 import { skills } from '../constants'
 
 const About = () => {
@@ -33,6 +34,8 @@ const About = () => {
           ))}
         </div>
       </div>
+      <hr className=' border-slate-200' />
+      <CTA />
     </section>
   )
 }

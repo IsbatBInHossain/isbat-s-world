@@ -39,7 +39,7 @@ const rederedContent = {
   ),
   4: (
     <InfoBox
-      text='Need a project done or looking for a dev? Just give me a holler.'
+      text="Got an idea for a project? Let's make that into reality together."
       link='/contact'
       btnText="Let's Talk"
     />
