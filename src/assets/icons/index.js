@@ -31,6 +31,8 @@ import framer from './framer.svg'
 import mysql from './mysql.svg'
 import django from './django.svg'
 import restApi from './rest-api.svg'
+import wizard from './wizard.png'
+import web from './web.svg'
 
 export {
   css,
@@ -64,4 +66,6 @@ export {
   restApi,
   mysql,
   framer,
+  wizard,
+  web,
 }

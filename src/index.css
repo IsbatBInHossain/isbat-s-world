@@ -173,8 +173,8 @@ body:has(.card[data-color='green']:hover) {
 }
 
 .glassy-button {
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-  color: #fff; /* White text color */
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -211,7 +211,7 @@ body:has(.card[data-color='green']:hover) {
   }
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
   20% {
     transform: rotate(-8deg);
   }

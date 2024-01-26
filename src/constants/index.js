@@ -25,6 +25,7 @@ import {
   tailwindcss,
   threads,
   typescript,
+  wizard,
 } from '../assets/icons'
 
 export const skills = [
@@ -171,6 +172,62 @@ export const experiences = [
   },
 ]
 
+export const projects = [
+  {
+    icon: threads,
+    iconBg: '#a77eff',
+    title: 'Threads Clone',
+    date: 'Sep 2023 - Oct 2023',
+    description:
+      'A full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
+    features: [
+      'Create and share threads with other users',
+      'Signup and authenticate users using clerk',
+      'Fully responsivee across all platforms',
+      'Personalized and customizable user profile',
+      'Create and Join communities',
+    ],
+    'project-url': 'https://github.com/IsbatBInHossain/threads-clone',
+    'live-link': 'https://threads-clone-rho.vercel.app/',
+    tecnologies: [
+      'React',
+      'Next.js',
+      'MongoDB',
+      'TailwindCSS',
+      'Clerk',
+      'Uploadthing',
+      'Shadcn',
+      'Zod',
+    ],
+  },
+  {
+    icon: wizard,
+    iconBg: '#ffdb60',
+    title: 'Warehouse Wizard',
+    date: 'Jun 2023 - Jul 2023',
+    description:
+      'An inventory management system for keeping track of the product stocks and prices in a store.',
+    features: [
+      'Signup and authenticate users',
+      'Add new products or delete and edit existing products',
+      'Intuitive and user-friendly interface',
+      'Personalized and customizable user profile',
+      'Cloudinary Integration for string photos of products and users',
+    ],
+    'project-url': 'https://github.com/IsbatBInHossain/Warehouse-Wizard',
+    'live-link': 'https://warehouse-wizard.vercel.app/',
+    tecnologies: [
+      'React',
+      'Express.js',
+      'MongoDB',
+      'Redux',
+      'Node.js',
+      'Cloudinary',
+      'SCSS',
+    ],
+  },
+]
+
 export const socialLinks = [
   {
     name: 'Contact',
@@ -180,71 +237,45 @@ export const socialLinks = [
   {
     name: 'GitHub',
     iconUrl: github,
-    link: 'https://github.com/YourGitHubUsername',
+    link: 'https://github.com/IsbatBInHossain',
   },
   {
     name: 'LinkedIn',
     iconUrl: linkedin,
-    link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+    link: 'https://www.linkedin.com/in/isbat-bin-hossain-94313b270',
   },
 ]
 
-export const projects = [
+export const otherProjects = [
   {
     iconUrl: threads,
     theme: 'btn-back-green',
-    name: 'Full Stack Threads Clone',
+    name: 'Codenotes',
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: 'https://github.com/IsbatBInHossain/threads-clone',
+      ' A code editor and note-taking app, enables users to write, organize, and manage code snippets, documentation, and entire projects. ',
+    link: 'https://github.com/IsbatBInHossain/codenotes',
   },
   {
     iconUrl: car,
-    theme: 'btn-back-blue',
-    name: 'Car Finding App',
-    description:
-      'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-    link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+    theme: 'btn-back-black',
+    name: 'Endless Runner Game',
+    description: 'Built an endless runner game using JavaScript.',
+    link: 'https://github.com/IsbatBInHossain/endless-runner-game',
   },
   {
     iconUrl: snapgram,
-    theme: 'btn-back-pink',
-    name: 'Full Stack Instagram Clone',
+    theme: 'btn-back-yellow',
+    name: 'Propmt Central',
     description:
-      'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-    link: 'https://github.com/adrianhajdin/social_media_app',
+      'Built an AI prompt sharing platform built with Next.js and Tailwind CSS. This platform allows users to explore and discover a wide range of AI prompts contributed by the community',
+    link: 'https://github.com/IsbatBInHossain/prompt-central',
   },
   {
     iconUrl: estate,
-    theme: 'btn-back-black',
-    name: 'Real-Estate Application',
+    theme: 'btn-back-blue',
+    name: 'Tech Haven',
     description:
-      'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-    link: 'https://github.com/adrianhajdin/projects_realestate',
-  },
-  {
-    iconUrl: summiz,
-    theme: 'btn-back-yellow',
-    name: 'AI Summarizer Application',
-    description:
-      'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-    link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+      'Developed an e-commerce site with Payload CMS with a streamlined admin panel, secured authentication, and efficient payment processing through Stripe',
+    link: 'https://github.com/IsbatBInHossain/Tech-Haven',
   },
 ]
-
-// {
-//   iconUrl: threads,
-//   theme: 'btn-back-green',
-//   name: 'Full Stack Threads Clone',
-//   description:
-//     'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-//   features: [
-//     'Create and share threads with other users',
-//     'Signup and authenticate users using clerk',
-//     'Fully responsivee across all platforms',
-//     'Personalized and customizable user profile',
-//     'Create and Join communities',
-//   ],
-//   'project-url': 'https://github.com/IsbatBInHossain/threads-clone',
-//   'live-link': 'https://isbat-bin-hossain.vercel.app/',
-// },
