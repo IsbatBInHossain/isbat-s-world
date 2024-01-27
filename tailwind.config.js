@@ -16,6 +16,10 @@ export default {
           500: '#2b77e7',
         },
         ash: '#e2e8f0',
+        dark: {
+          DEFAULT: '#0f172a',
+          accent: '#1e293b',
+        },
       },
       fontFamily: {
         worksans: ['Work Sans', 'sans-serif'],

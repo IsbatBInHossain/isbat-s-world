@@ -33,15 +33,15 @@ export default function App() {
     <ThemeContext.Provider value={theme}>
       <main
         className={`bg-slate-300/20 ${
-          theme === 'dark' ? 'dark:bg-[#0f172a] dark:text-white' : ''
+          theme === 'dark' ? 'dark:bg-dark dark:text-white' : ''
         } h-screen overflow-y-auto`}
       >
         <Router>
           <Navbar setTheme={setTheme} theme={theme} />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
             <Route path='/projects' element={<Projects />} />
+            <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
         </Router>

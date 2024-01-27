@@ -31,6 +31,7 @@ import web from './web.svg'
 import codenotes from './codenotes.svg'
 import darkmode from './darkmode.svg'
 import lightmode from './lightmode.svg'
+import hand from './hand.svg'
 
 export {
   css,
@@ -66,4 +67,5 @@ export {
   codenotes,
   darkmode,
   lightmode,
+  hand,
 }

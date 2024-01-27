@@ -27,7 +27,7 @@ const ProjectList = ({ projects, type }) => {
                 to={project.link}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='font-semibold text-blue-600'
+                className='font-semibold text-blue-600 dark:text-blue-300'
               >
                 Code Repo Link
               </Link>
