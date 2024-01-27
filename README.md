@@ -1,8 +1,3 @@
-# React + Vite
+# Isbat's World 3D
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Isbat's World is a 3D portfolio built with React Three Fiber, showcasing a collection of projects in an immersive environment. Explore the creative space and toggle between dark and light modes.

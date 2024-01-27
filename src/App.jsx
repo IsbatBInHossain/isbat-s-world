@@ -10,6 +10,16 @@ export default function App() {
   useEffect(() => {
     const htmlElement = document.documentElement
 
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+
     if (theme === 'dark') {
       htmlElement.classList.add('dark')
       htmlElement.classList.remove('light')

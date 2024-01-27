@@ -6,8 +6,13 @@ const Navbar = ({ theme, setTheme }) => {
   const pathname = location.pathname
 
   const toggleTheme = () => {
-    if (theme === 'dark') setTheme('light')
-    else setTheme('dark')
+    if (theme === 'dark') {
+      setTheme('light')
+      localStorage.setItem('theme', 'light')
+    } else {
+      setTheme('dark')
+      localStorage.setItem('theme', 'dark')
+    }
   }
 
   return (
