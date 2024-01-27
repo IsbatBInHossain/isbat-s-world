@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -14,6 +15,7 @@ export default {
         blue: {
           500: '#2b77e7',
         },
+        ash: '#e2e8f0',
       },
       fontFamily: {
         worksans: ['Work Sans', 'sans-serif'],
