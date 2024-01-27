@@ -26,6 +26,7 @@ import {
   threads,
   typescript,
   wizard,
+  codenotes,
 } from '../assets/icons'
 
 export const skills = [
@@ -226,6 +227,31 @@ export const projects = [
       'SCSS',
     ],
   },
+  {
+    icon: codenotes,
+    iconBg: '#1f1f1f',
+    title: 'CodeNotes',
+    date: 'May 2023 - Jun 2023',
+    description:
+      'An interactive browser-based coding environment with a markdown editor. Users can safely write JS codes to bundle and transplie in real time in the browser. ',
+    features: [
+      'Write code snippets and documentation',
+      'Run JS code in a sandboxed environment',
+      'Import any library you want',
+      'Show any piece of data (even React components) on the screen',
+      'Cache all downloaded libraries for offline use',
+    ],
+    'project-url': 'https://github.com/IsbatBInHossain/codenotes',
+    tecnologies: [
+      'React',
+      'Redux',
+      'Monaco editor',
+      'Typescript',
+      'esbuild-WASM',
+      'bulmaCSS',
+      'lerna',
+    ],
+  },
 ]
 
 export const socialLinks = [
@@ -248,7 +274,6 @@ export const socialLinks = [
 
 export const otherProjects = [
   {
-    iconUrl: threads,
     theme: 'btn-back-green',
     name: 'Codenotes',
     description:
@@ -256,14 +281,12 @@ export const otherProjects = [
     link: 'https://github.com/IsbatBInHossain/codenotes',
   },
   {
-    iconUrl: car,
     theme: 'btn-back-black',
     name: 'Endless Runner Game',
     description: 'Built an endless runner game using JavaScript.',
     link: 'https://github.com/IsbatBInHossain/endless-runner-game',
   },
   {
-    iconUrl: snapgram,
     theme: 'btn-back-yellow',
     name: 'Propmt Central',
     description:
@@ -271,11 +294,33 @@ export const otherProjects = [
     link: 'https://github.com/IsbatBInHossain/prompt-central',
   },
   {
-    iconUrl: estate,
     theme: 'btn-back-blue',
     name: 'Tech Haven',
     description:
       'Developed an e-commerce site with Payload CMS with a streamlined admin panel, secured authentication, and efficient payment processing through Stripe',
     link: 'https://github.com/IsbatBInHossain/Tech-Haven',
+  },
+  {
+    theme: 'btn-back-orange',
+    name: 'Old portfolio',
+    description:
+      'Created a portfolio with HTML, CSS and JS. It has dark and light mode as well as being fully mobile responsive',
+    link: 'https://github.com/IsbatBInHossain/personal-website-v1',
+  },
+]
+
+export const currentProjects = [
+  {
+    theme: 'btn-back-yellow',
+    name: 'The experiment',
+    description:
+      'A collection of frontend focused projects that I found interesting.',
+    link: 'https://github.com/IsbatBInHossain/the_experiment',
+  },
+  {
+    theme: 'btn-back-blue',
+    name: 'CV maker',
+    description: 'An online cv making app for creating and downloading CV',
+    link: 'https://github.com/IsbatBInHossain/cv-maker',
   },
 ]

@@ -33,6 +33,7 @@ import django from './django.svg'
 import restApi from './rest-api.svg'
 import wizard from './wizard.png'
 import web from './web.svg'
+import codenotes from './codenotes.svg'
 
 export {
   css,
@@ -68,4 +69,5 @@ export {
   framer,
   wizard,
   web,
+  codenotes,
 }
