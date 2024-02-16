@@ -1,0 +1,44 @@
+.loader,
+.loader:before,
+.loader:after {
+  width: 35px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 3px inset #fff;
+  position: relative;
+  animation: l6 1.5s infinite 0.5s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  left: calc(100% + 5px);
+  animation-delay: 1s;
+}
+.loader:after {
+  left: -40px;
+  animation-delay: 0s;
+}
+@keyframes l6 {
+  0%,
+  55%,
+  100% {
+    border-radius: 0;
+  }
+  20%,
+  30% {
+    border-radius: 50%;
+  }
+}
+
+.loading {
+  clip-path: inset(0 100% 0 0);
+  animation: l5 2s steps(11) infinite;
+}
+.loading:before {
+  content: 'Loading...';
+}
+@keyframes l5 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}

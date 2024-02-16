@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import { Home, Contact, Projects, About } from './pages'
+import { Contact, Projects, About, Home } from './pages'
 import { ThemeContext } from './context/ThemeContext'
+import HomeLoader from './components/HomeLoader'
 
 export default function App() {
   const [theme, setTheme] = useState('dark')
