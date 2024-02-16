@@ -103,7 +103,9 @@ const Home = () => {
         {!moved && (
           <div className=' absolute bottom-4 left-[50%] -translate-x-[50%] flex flex-col gap-2 justify-center items-center'>
             <img src='/drag.svg' alt='drag' className=' w-12 h-12' />
-            <p className=' uppercase font-semibold text-xl'>Drag to explore</p>
+            <p className=' uppercase font-semibold text-xl text-black'>
+              Drag to explore
+            </p>
           </div>
         )}
       </section>
