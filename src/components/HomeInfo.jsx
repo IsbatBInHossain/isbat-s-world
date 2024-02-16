@@ -23,7 +23,6 @@ const rederedContent = {
       <br />A Full Stack Web Developer
       <br />
       <br />
-      Drag the mouse to move
     </h1>
   ),
   2: (
